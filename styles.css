@@ -1,3 +1,9 @@
+/* Reset Browser Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -6,6 +12,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Header */
 header {
     background-color: aqua;
     color: #662c2c;
@@ -13,6 +20,7 @@ header {
     padding: 20px 10px;
 }
 
+/* Navbar */
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -33,6 +41,7 @@ header {
     display: block;
 }
 
+/* Content */
 .content {
     display: block;
     padding: 15px;
@@ -42,6 +51,7 @@ header {
     margin-bottom: 20px;
 }
 
+/* Spotlight Section */
 .spotlight {
     display: flex;
     flex-direction: column;
@@ -54,11 +64,27 @@ header {
     text-align: center;
 }
 
+/* Footer */
 footer {
     background-color: #fbf4f4;
     color: #4b1b1b;
     text-align: center;
     padding: 10px;
+}
+
+/* Media Queries for Mobile (max-width 600px) */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .spotlightItem {
+        width: 100%;
+    }
 }
 
 /* Desktop Styles (min-width 1024px) */
