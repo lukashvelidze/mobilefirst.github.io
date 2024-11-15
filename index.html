@@ -4,21 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile First Flexbox Layout</title>
+    <!-- Custom Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #ff6ec7, #ff9a8b);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #fff;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            background-color: #2c3e50;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ecf0f1 !important;
+        }
+
+        .jumbotron {
+            background-color: #34495e;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .jumbotron h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .carousel-inner img {
+            border-radius: 10px;
+        }
+
+        .spotlight-item figure {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .spotlight-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .spotlight-item:hover img {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer a:hover {
+            color: #ff6ec7;
+        }
+
+        /* Button Styles */
+        .btn-custom {
+            background-color: #ff6ec7;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff9a8b;
+            transition: background-color 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Mobile First Flexbox</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -35,10 +135,10 @@
     </nav>
 
     <!-- Jumbotron -->
-    <div class="jumbotron text-center bg-primary text-white p-5 mb-4">
+    <div class="jumbotron">
         <h1>Welcome to Mobile First Flexbox Layout</h1>
-        <p>Learn how to build responsive websites with Flexbox and Bootstrap</p>
-        <a href="#main-content" class="btn btn-light">Get Started</a>
+        <p>Learn how to build responsive websites with Flexbox and Bootstrap.</p>
+        <a href="#main-content" class="btn btn-custom">Get Started</a>
     </div>
 
     <main class="container">
@@ -113,12 +213,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer bg-dark text-white text-center py-3">
-        <p>This page is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-white">Creative Commons Attribution-ShareAlike License</a></p>
+    <footer>
+        <p>This page is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike License</a></p>
     </footer>
 
     <!-- Bootstrap JS (including Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+    <script src="https://cdn.jsdelivr
