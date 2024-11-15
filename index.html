@@ -4,60 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile First Flexbox Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Mobile First Flexbox Layout</h1>
-    </header>
-    
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mobile First Flexbox</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main class="content">
-        <section class="main-content">
-            <h2>Mobile First Design</h2>
-            
-            <p>Mobile-first design is a web development approach that prioritizes the design and functionality of a website for mobile devices before adapting it to larger screens such as tablets and desktops. This methodology reflects the growing trend of mobile internet usage, as more people now access the web primarily through their smartphones. By starting with the constraints of smaller screens, developers ensure that the essential features of a website—like navigation, content readability, and user interaction—are optimized for the most limited space. Once the mobile version is established, the design is progressively enhanced for larger devices, adding more complex features and visual elements as screen real estate increases.</p>
-
-            <p>One of the core principles of mobile-first design is that it forces developers to prioritize content. On small screens, there is little room for superfluous elements, so designers must focus on delivering the most important information and actions to users. This results in lean, efficient websites that load quickly and are easy to navigate, even on slower mobile networks. The mobile-first approach also ensures that a website is inherently responsive, meaning it adjusts fluidly to different screen sizes and orientations, providing a seamless experience across devices.</p>
-
-                </section>
-        <aside class="sidebar">
-            <h2>Functional Experience</h2>
-            <p>Incorporating mobile-first design also aligns with the idea of progressive enhancement—a development philosophy that starts with a basic, functional experience and then adds layers of complexity as the user's browser or device capabilities allow. This ensures that users on older or less powerful devices still receive a functional version of the site, while those with more modern technology get an enhanced experience. By adopting mobile-first design, developers can create websites that are both more accessible and future-proof, responding effectively to the ongoing shift towards mobile browsing.</p>
-      
-            </aside>
-    </main>
-    <section class = "spotlight">
-        <div class = "spotlightItem">
-            <figure>
-                <img src = "images/logo.png" alt = "Flexbox layout">
-                <figcaption>An alternative to float and clear</figcaption>
-            </figure>
-        </div>
-        <div class = "spotlightItem">
-            <figure>
-                <img src = "images/th.jfif" alt = "Flexbox frog">
-                <figcaption>Easy to use</figcaption>
-            </figure> 
-        </div>
-        <div class = "spotlightItem">
-            <figure>
-                <img src = "images/mobilefirst.jpg" alt = "Flexbox frog">
-                <figcaption>Scales for phones</figcaption>
-            </figure>
-        </div>
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center bg-primary text-white p-5 mb-4">
+        <h1>Welcome to Mobile First Flexbox Layout</h1>
+        <p>Learn how to build responsive websites with Flexbox and Bootstrap</p>
+        <a href="#main-content" class="btn btn-light">Get Started</a>
     </div>
-    </section>
-    <footer class="footer">
-        <p>This page is available under the <a href = "https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike License</a></p>
+
+    <main class="container">
+        <div class="row">
+            <!-- Main Content Section -->
+            <section class="col-md-8">
+                <h2>Mobile First Design</h2>
+                <p>Mobile-first design is a web development approach that prioritizes the design and functionality of a website for mobile devices...</p>
+                <p>This methodology reflects the growing trend of mobile internet usage, as more people now access the web primarily through their smartphones...</p>
+            </section>
+
+            <!-- Sidebar Section -->
+            <aside class="col-md-4">
+                <h2>Functional Experience</h2>
+                <p>Incorporating mobile-first design also aligns with the idea of progressive enhancement...</p>
+            </aside>
+        </div>
+
+        <!-- Carousel -->
+        <div id="carouselExample" class="carousel slide my-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/logo.png" class="d-block w-100" alt="Flexbox layout">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Flexbox: An Alternative to Float and Clear</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/th.jfif" class="d-block w-100" alt="Flexbox frog">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Easy to Use</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/mobilefirst.jpg" class="d-block w-100" alt="Mobile-first design">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Scales for Phones</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Spotlight Section -->
+        <section class="spotlight row">
+            <div class="col-md-4 spotlight-item">
+                <figure>
+                    <img src="images/logo.png" class="img-fluid" alt="Flexbox layout">
+                    <figcaption>An alternative to float and clear</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 spotlight-item">
+                <figure>
+                    <img src="images/th.jfif" class="img-fluid" alt="Flexbox frog">
+                    <figcaption>Easy to use</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 spotlight-item">
+                <figure>
+                    <img src="images/mobilefirst.jpg" class="img-fluid" alt="Flexbox frog">
+                    <figcaption>Scales for phones</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>This page is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-white">Creative Commons Attribution-ShareAlike License</a></p>
     </footer>
+
+    <!-- Bootstrap JS (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
